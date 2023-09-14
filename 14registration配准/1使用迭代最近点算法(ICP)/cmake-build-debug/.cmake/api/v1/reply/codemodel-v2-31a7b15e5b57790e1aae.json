@@ -1,0 +1,60 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"jsonFile" : "directory-.-Debug-f5ebdc15457944623624.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "2.8"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "cloud_viewer",
+					"targetIndexes" : 
+					[
+						0
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "iterative_closest_point::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-iterative_closest_point-Debug-6af29f195bdc218e1d84.json",
+					"name" : "iterative_closest_point",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/jhr/Program/pcl-learning/14registration\u914d\u51c6/1\u4f7f\u7528\u8fed\u4ee3\u6700\u8fd1\u70b9\u7b97\u6cd5(ICP)/cmake-build-debug",
+		"source" : "/home/jhr/Program/pcl-learning/14registration\u914d\u51c6/1\u4f7f\u7528\u8fed\u4ee3\u6700\u8fd1\u70b9\u7b97\u6cd5(ICP)"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 5
+	}
+}

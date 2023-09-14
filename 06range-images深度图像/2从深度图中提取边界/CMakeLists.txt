@@ -2,7 +2,11 @@ cmake_minimum_required(VERSION 2.8 FATAL_ERROR)
 
 project(cloud_viewer)
 
-find_package(PCL 1.2 REQUIRED)
+
+find_package(PCL REQUIRED
+        PATHS /usr/local/pcl-1-9
+        NO_DEFAULT_PATH
+)
 
 include_directories(${PCL_INCLUDE_DIRS})
 link_directories(${PCL_LIBRARY_DIRS})

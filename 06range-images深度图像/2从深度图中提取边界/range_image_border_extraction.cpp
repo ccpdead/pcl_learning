@@ -81,7 +81,7 @@ main (int argc, char** argv)
   pcl::PointCloud<pcl::PointWithViewpoint> far_ranges;
   Eigen::Affine3f scene_sensor_pose (Eigen::Affine3f::Identity ());  //传感器的位置
   std::vector<int> pcd_filename_indices = pcl::console::parse_file_extension_argument (argc, argv, "pcd");
-  if (!pcd_filename_indices.empty ())
+  if (!pcd_filename_indices.empty ())//点云非空
   {
     std::string filename = argv[pcd_filename_indices[0]];
     if (pcl::io::loadPCDFile (filename, point_cloud) == -1)   //打开文件

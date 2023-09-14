@@ -1,0 +1,60 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"jsonFile" : "directory-.-Debug-f5ebdc15457944623624.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "2.8"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "cloud_viewer",
+					"targetIndexes" : 
+					[
+						0
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "range_image_creation::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-range_image_creation-Debug-85f58b02d0323bfe4855.json",
+					"name" : "range_image_creation",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/jhr/Program/pcl-learning/06range-images\u6df1\u5ea6\u56fe\u50cf/1\u4ece\u70b9\u4e91\u521b\u5efa\u6df1\u5ea6\u56fe/cmake-build-debug",
+		"source" : "/home/jhr/Program/pcl-learning/06range-images\u6df1\u5ea6\u56fe\u50cf/1\u4ece\u70b9\u4e91\u521b\u5efa\u6df1\u5ea6\u56fe"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 5
+	}
+}
