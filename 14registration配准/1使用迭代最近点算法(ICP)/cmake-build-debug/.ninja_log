@@ -1,4 +1,0 @@
-# ninja log v5
-11974	17012	1693904263049986918	iterative_closest_point	120c18fee8584ecf
-0	141	1694590797409518993	build.ninja	1b6a3f4afbc5113d
-0	11965	1693904257989928322	CMakeFiles/iterative_closest_point.dir/iterative_closest_point.cpp.o	94f8a62e4d9e8440

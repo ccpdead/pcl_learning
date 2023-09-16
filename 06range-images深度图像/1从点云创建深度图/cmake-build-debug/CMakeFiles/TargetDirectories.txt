@@ -1,3 +1,0 @@
-/home/jhr/Program/pcl-learning/06range-images深度图像/1从点云创建深度图/cmake-build-debug/CMakeFiles/range_image_creation.dir
-/home/jhr/Program/pcl-learning/06range-images深度图像/1从点云创建深度图/cmake-build-debug/CMakeFiles/edit_cache.dir
-/home/jhr/Program/pcl-learning/06range-images深度图像/1从点云创建深度图/cmake-build-debug/CMakeFiles/rebuild_cache.dir
