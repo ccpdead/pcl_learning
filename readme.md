@@ -2,6 +2,38 @@ PCL完全是一个模块化的现代C++模板库，基于一下第三方库：Bo
 
 ![image-20230918163203398](./image/image-20230918163203398.png)
 
+## 可用Point类型
+
+```
+PointXYZ
+PointXYZI
+PointXYZRGBA
+PointXYZRGB
+PointXY
+InterestPoint
+Normal
+PointNormal
+PointXYZRGBNormal
+PointXYZINormal
+PointWithRange
+PointWithViewpoint
+MomentInvariants
+PrincipalRadiiRSD
+Boundary
+PrincipalCurvatures
+BounPFHSignature125dary
+FPFHSignature33
+VFHSignature308
+Narf36
+BorderDescription
+IntensityGradient
+Histogram
+PointWithScale
+PointSurfel
+```
+
+
+
 MovingLeastSquares是PCL库中用于点云插值的滤波器。它使用滑动最小二乘法来拟合点云，并根据拟合结果插值新点。
 
 MovingLeastSquares滤波器可以用于以下场景：
