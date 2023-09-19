@@ -14,8 +14,7 @@
 #include <pcl/point_types.h>      //点类型定义头文件
 #include <pcl/registration/icp.h> //ICP配准类相关头文件
 
-int main(int argc, char **argv)
-{
+int main(int argc, char **argv) {
     // 定义输入和输出点云
     pcl::PointCloud<pcl::PointXYZ>::Ptr cloud_in(new pcl::PointCloud<pcl::PointXYZ>);
     pcl::PointCloud<pcl::PointXYZ>::Ptr cloud_out(new pcl::PointCloud<pcl::PointXYZ>);
@@ -25,8 +24,7 @@ int main(int argc, char **argv)
     cloud_in->height = 1; //设置点云为无序点
     cloud_in->is_dense = false;
     cloud_in->points.resize(cloud_in->width * cloud_in->height);
-    for (size_t i = 0; i < cloud_in->points.size(); ++i)
-    {
+    for (size_t i = 0; i < cloud_in->points.size(); ++i) {
         cloud_in->points[i].x = 1024 * rand() / (RAND_MAX + 1.0f);
         cloud_in->points[i].y = 1024 * rand() / (RAND_MAX + 1.0f);
         cloud_in->points[i].z = 1024 * rand() / (RAND_MAX + 1.0f);
@@ -34,7 +32,8 @@ int main(int argc, char **argv)
     std::cout << "Saved " << cloud_in->points.size() << " data points to input:" //打印点云总数
               << std::endl;
     for (size_t i = 0; i < cloud_in->points.size(); ++i)            //打印坐标
-        std::cout << "    " << cloud_in->points[i].x << " " << cloud_in->points[i].y << " " << cloud_in->points[i].z << std::endl;
+        std::cout << "    " << cloud_in->points[i].x << " " << cloud_in->points[i].y << " " << cloud_in->points[i].z
+                  << std::endl;
     *cloud_out = *cloud_in;
     std::cout << "size:" << cloud_out->points.size() << std::endl;
 
@@ -45,7 +44,8 @@ int main(int argc, char **argv)
     std::cout << "Transformed " << cloud_in->points.size() << " data points:"
               << std::endl;
     for (size_t i = 0; i < cloud_out->points.size(); ++i)                         //打印构造出来的目标点云
-        std::cout << "    " << cloud_out->points[i].x << " " << cloud_out->points[i].y << " " << cloud_out->points[i].z << std::endl;
+        std::cout << "    " << cloud_out->points[i].x << " " << cloud_out->points[i].y << " " << cloud_out->points[i].z
+                  << std::endl;
 
     // 创建IterativeClosestPoint的实例
     // setInputSource将cloud_in作为输入点云

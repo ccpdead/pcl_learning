@@ -58,8 +58,15 @@ int main(int argc, char **argv)
     boost::shared_ptr<pcl::RangeImage> range_image_ptr(new pcl::RangeImage); // 用于可视化？共享指针
     pcl::RangeImage &rangeImage = *range_image_ptr;
 
-    rangeImage.createFromPointCloud(pointCloud, angularResolution, maxAngleWidth, maxAngleHeight,
-                                    sensorPose, coordinate_frame, noiseLevel, minRange, borderSize);
+    rangeImage.createFromPointCloud(pointCloud,
+                                    angularResolution,
+                                    maxAngleWidth,
+                                    maxAngleHeight,
+                                    sensorPose,
+                                    coordinate_frame,
+                                    noiseLevel,
+                                    minRange,
+                                    borderSize);
     /*
     关于range_image.createFromPointCloud（）参数的解释 （涉及的角度都为弧度为单位） ：
     point_cloud为创建深度图像所需要的点云
@@ -82,7 +89,7 @@ int main(int argc, char **argv)
     // 添加深度图点云
     pcl::visualization::PointCloudColorHandlerCustom<pcl::PointWithRange> range_image_color_handler(range_image_ptr, 0, 0, 0);
     viewer.addPointCloud(range_image_ptr, range_image_color_handler, "range image");
-    viewer.setPointCloudRenderingProperties(pcl::visualization::PCL_VISUALIZER_POINT_SIZE, 4, "range image");
+    viewer.setPointCloudRenderingProperties(pcl::visualization::PCL_VISUALIZER_POINT_SIZE, 2, "range image");
 
     // 添加原始点云
     pcl::visualization::PointCloudColorHandlerCustom<pcl::PointXYZ> org_image_color_handler(pointCloudPtr, 255, 100, 0);
@@ -90,7 +97,7 @@ int main(int argc, char **argv)
     viewer.setPointCloudRenderingProperties(pcl::visualization::PCL_VISUALIZER_POINT_SIZE, 2, "orginal image");
 
     viewer.initCameraParameters();
-    viewer.addCoordinateSystem(1.0);
+    viewer.addCoordinateSystem(0.5);
 
     //--------------------
     // -----Main loop-----

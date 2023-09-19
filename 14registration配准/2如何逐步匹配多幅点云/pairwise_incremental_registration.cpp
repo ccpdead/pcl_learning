@@ -114,6 +114,7 @@ void showCloudsRight(const PointCloudWithNormals::Ptr cloud_target, const PointC
   * \param argv the actual command line arguments (pass from main ())
   * \param models the resultant vector of point cloud datasets
   */
+
 void loadData(int argc, char **argv, std::vector<PCD, Eigen::aligned_allocator<PCD>> &models)
 {
     std::string extension(".pcd");
@@ -159,7 +160,7 @@ void pairAlign (const PointCloud::Ptr cloud_src, const PointCloud::Ptr cloud_tgt
     pcl::VoxelGrid<PointT> grid;         //滤波处理对象
     if (downsample)
     {
-        grid.setLeafSize(0.05, 0.05, 0.05); //设置滤波时采用的体素大小
+        grid.setLeafSize(0.01, 0.01, 0.01); //设置滤波时采用的体素大小
         grid.setInputCloud(cloud_src);
         grid.filter(*src);
 

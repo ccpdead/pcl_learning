@@ -64,7 +64,7 @@ main (int argc, char **argv)
   // 为了加快处理速度，我们使用PCL的：pcl::VoxelGrid类将对象和场景点云的采样率下采样至5 mm。
   pcl::console::print_highlight ("Downsampling...\n");
   pcl::VoxelGrid<PointNT> grid;
-  const float leaf = 0.005f;
+  const float leaf = 0.002f;
   grid.setLeafSize (leaf, leaf, leaf);
   grid.setInputCloud (object);  // 对象下采样
   grid.filter (*object);

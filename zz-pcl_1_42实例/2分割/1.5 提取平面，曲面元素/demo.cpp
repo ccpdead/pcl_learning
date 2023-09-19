@@ -18,24 +18,24 @@ main (int argc, char** argv)
 
     // Fill in the cloud data
     pcl::PCDReader reader;
-    reader.read ("../temp3.pcd", *cloud_blob);
+    reader.read ("../plate2_mls.pcd", *cloud_blob);
 
     std::cerr << "PointCloud before filtering: " << cloud_blob->width * cloud_blob->height << " data points." << std::endl;
 
     // Create the filtering object: downsample the dataset using a leaf size of 1cm
-    pcl::VoxelGrid<pcl::PCLPointCloud2> sor;//体素滤波器
-    sor.setInputCloud (cloud_blob);
-    sor.setLeafSize (0.002f, 0.002f, 0.002f);
-    sor.filter (*cloud_filtered_blob);
+//    pcl::VoxelGrid<pcl::PCLPointCloud2> sor;//体素滤波器
+//    sor.setInputCloud (cloud_blob);
+//    sor.setLeafSize (0.002f, 0.002f, 0.002f);
+//    sor.filter (*cloud_filtered_blob);
 
     // Convert to the templated PointCloud
-    pcl::fromPCLPointCloud2 (*cloud_filtered_blob, *cloud_filtered);
+    pcl::fromPCLPointCloud2 (*cloud_blob, *cloud_filtered);
 
     std::cerr << "PointCloud after filtering: " << cloud_filtered->width * cloud_filtered->height << " data points." << std::endl;
 
     // Write the downsampled version to disk
     pcl::PCDWriter writer;//保存降采样后的数据
-    writer.write<pcl::PointXYZ> ("../temp3_downsampled.pcd", *cloud_filtered, false);
+//    writer.write<pcl::PointXYZ> ("../plate2_mls_downsampled.pcd", *cloud_filtered, false);
 
     pcl::ModelCoefficients::Ptr coefficients (new pcl::ModelCoefficients ());
     pcl::PointIndices::Ptr inliers (new pcl::PointIndices ());//点云索引
@@ -47,7 +47,7 @@ main (int argc, char** argv)
     seg.setModelType (pcl::SACMODEL_PLANE);//平面检测器
     seg.setMethodType (pcl::SAC_RANSAC);
     seg.setMaxIterations (1000);
-    seg.setDistanceThreshold (0.01);
+    seg.setDistanceThreshold (0.002);
 
     // Create the filtering object
     //通过ExtractIndices滤波器提取点云中的子集
@@ -75,13 +75,13 @@ main (int argc, char** argv)
         std::cerr << "PointCloud representing the planar component: " << cloud_p->width * cloud_p->height << " data points." << std::endl;
 
         std::stringstream ss;//字符串与整形转换
-        ss << "../temp3_" << i << ".pcd";
+        ss << "../plate2_" << i << ".pcd";
         writer.write<pcl::PointXYZ> (ss.str (), *cloud_p, false);
 
         // Create the filtering object
         extract.setNegative (false);
         extract.filter (*cloud_f);
-        writer.write<pcl::PointXYZ>("../temp3_p.pcd",*cloud_f,false);
+        writer.write<pcl::PointXYZ>("../plate2_p.pcd",*cloud_f,false);
         cloud_filtered.swap (cloud_f);
 
         i++;

@@ -4,7 +4,7 @@ PCL完全是一个模块化的现代C++模板库，基于一下第三方库：Bo
 
 ## 可用Point类型
 
-```
+```shell
 PointXYZ
 PointXYZI
 PointXYZRGBA
@@ -32,18 +32,40 @@ PointWithScale
 PointSurfel
 ```
 
+# 01common
+
+# 02KDTree
+
+# 03Octree
+
+# 04Search
+
+# 05sample consensus采样一致性
+
+# 06range-image深度图像
+
+# 07 tracking跟踪
+
+# 08 数据输入输出
+
+# 09 filters滤波/降采样
+
+# 10 features特征
+
+# 11 surface表面
+
+# 12 segmentation分割(聚类)
+
+# 13 recognition识别
+
+# 14 registration配准
+
+<img src="./image/1603354444210-452181a3-5e9c-453f-a1b2-e5fbdbfd2fca.jpeg" alt="img" style="zoom:50%;" />
 
 
-MovingLeastSquares是PCL库中用于点云插值的滤波器。它使用滑动最小二乘法来拟合点云，并根据拟合结果插值新点。
 
-MovingLeastSquares滤波器可以用于以下场景：
+# 15 visualization可视化
 
-点云上采样：使用MovingLeastSquares滤波器可以将低密度的点云上采样为高密度的点云。
-点云平滑：使用MovingLeastSquares滤波器可以将点云中的噪声和畸变进行平滑。
-点云重建：使用MovingLeastSquares滤波器可以将点云中的空洞进行填充。
-MovingLeastSquares滤波器有以下参数：
+# 16 keypins关键点
 
-searchRadius：滑动窗口的半径。
-upsamplingMethod：上采样方法。
-interpolationMethod：插值方法。
-outputNormals：是否输出法向量。
+# 17 tracking
