@@ -60,7 +60,7 @@ PointSurfel
 
 # 14 registration配准
 
-<img src="./image/1603354444210-452181a3-5e9c-453f-a1b2-e5fbdbfd2fca.jpeg" alt="img" style="zoom:50%;" />
+<img src="./image/1603354444210-452181a3-5e9c-453f-a1b2-e5fbdbfd2fca.jpeg" />
 
 
 
